@@ -1,8 +1,21 @@
+function getScore() {
+  // Get the score from the input
+  var number = document.getElementById('cijferInput').value;
+  return(number);
+}
+
 function rating() {
   // Calculates the rateing
-  var number = document.getElementById('cijferInput').value;
+  var number = getScore();
   var rate = rates(number);
-  showResult(rate, number);
+  showResult("Het cijfer is " + number + " en is dus een " + rate + "<br />");
+}
+function otherRate() {
+  // Other way of rateing the score
+  var number = getScore();
+  var rate = rates(number);
+
+  showResult("De beoordeling is: " + rate + ", want het cijfer is: " + number + "<br />");
 }
 function rates(number) {
   // This contains the tekst for every rate
@@ -22,7 +35,7 @@ function rates(number) {
     return("To big");
   }
 }
-function showResult(result, cijfer) {
+function showResult(text) {
   // Shows the rateing
-  document.getElementById('result').innerHTML = "Het cijfer is " + cijfer + " en is dus een " + result;
+  document.getElementById('result').innerHTML += text;
 }
