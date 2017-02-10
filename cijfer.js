@@ -19,7 +19,7 @@ function otherRate() {
 }
 function rates(number) {
   // This contains the tekst for every rate
-  if (number <= 49 && number ) {
+  if (number <= 49) {
     return("Onvoldoende");
   }
   else if (number >= 50 && number <= 59) {
