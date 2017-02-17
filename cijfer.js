@@ -2,6 +2,8 @@ function getScore() {
   // Get the score from the input
   var number = document.getElementById('cijferInput').value;
   return(number);
+  // tekst
+  //Lalal
 }
 
 function rating() {
