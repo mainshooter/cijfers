@@ -1,15 +1,13 @@
 function $id(element) {
   var array = stringToArray(element);
-  if (array[0] == ".") {
+  if (array[0] === ".") {
     array.shift();
     element = arrayToString(array);
-    console.log(element);
     var element = document.getElementsByClassName(element);
   }
-  else if (array[0] == "#") {
+  else if (array[0] === "#") {
     array.shift();
     element = arrayToString(array);
-    console.log(element);
     var element = document.getElementById(element);
   }
 
