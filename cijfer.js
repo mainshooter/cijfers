@@ -1,6 +1,38 @@
+function $id(element) {
+  var array = stringToArray(element);
+  if (array[0] == ".") {
+    array.shift();
+    element = arrayToString(array);
+    console.log(element);
+    var element = document.getElementsByClassName(element);
+  }
+  else if (array[0] == "#") {
+    array.shift();
+    element = arrayToString(array);
+    console.log(element);
+    var element = document.getElementById(element);
+  }
+
+  // var element = document.getElementById(id);
+  return(element);
+}
+function arrayToString(array) {
+  var text = "";
+  console.log(array);
+  for (var i = 0; i < array.length; i++) {
+    text += array[i];
+  }
+  return(text);
+}
+function stringToArray(string) {
+  var array = string.split("");
+  return(array);
+}
+
 function getScore() {
   // Get the score from the input
-  var number = document.getElementById('cijferInput').value;
+
+  var number = $id('#cijferInput').value;
   return(number);
 }
 
@@ -37,5 +69,6 @@ function rates(number) {
 }
 function showResult(text) {
   // Shows the rateing
-  document.getElementById('result').innerHTML += text;
+  $id('#result').innerHTML += text;
+  // document.getElementById('result').innerHTML += text;
 }
